@@ -16,4 +16,12 @@ public class MoneyTest {
         product = five.times(3);
         assertEquals(15, product.amount);
     }
+
+    /**
+     * 객체 동일 테스트
+     */
+    @Test
+    public void testEquality() {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
+    }
 }
