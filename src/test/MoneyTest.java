@@ -1,5 +1,4 @@
 import main.Dollar;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MoneyTest {
@@ -9,12 +8,10 @@ public class MoneyTest {
      */
     @Test
     void testMultiplication() {
-        //given
         Dollar five = new Dollar(5);
-        //when
-        five.times(2);
-
-        //then
-        Assertions.assertEquals(10, five.amount);
+        Dollar product = five.times(2);
+        assertEquals(10, product.acount);
+        product = five.times(3);
+        assertEquals(15, product.acount);
     }
 }
